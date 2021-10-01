@@ -1,0 +1,9 @@
+#base=css
+googleapi.css
+aos.css
+bootstrap.min.css
+bootstrap-icons.css
+boxicons.min.css
+glightbox.min.css
+swiper-bundle.min.css
+style.css

@@ -1,0 +1,12 @@
+<div data-sly-test="${wcmmode.edit}">
+    Multifield
+</div>
+
+<sly data-sly-use.model="com.myproject.aem.core.models.TitleModel">
+    <p>${model.heading}</p>
+    <sly data-sly-list.item="${model.listOfItems}">
+        <p>${item.title}</p>
+
+
+    </sly>
+</sly>

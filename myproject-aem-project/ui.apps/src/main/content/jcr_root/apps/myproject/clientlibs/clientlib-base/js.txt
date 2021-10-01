@@ -1,0 +1,8 @@
+#base=js
+aos.js
+bootstrap.bundle.min.js
+glightbox.min.js
+isotope.pkgd.min.js
+validate.js
+swiper-bundle.min.js
+main.js

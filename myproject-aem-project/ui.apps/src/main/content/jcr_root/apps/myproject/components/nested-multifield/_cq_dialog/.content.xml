@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Country Details"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <countries
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            composite="{Boolean}true"
+                            fieldLabel="Countries">
+                        <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                name="./countries">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <countryName
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Country Name"
+                                                name="./countryName"/>
+                                        <states
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="States">
+                                            <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./states">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <stateName
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="State Name"
+                                                                    name="./stateName"/>
+                                                            <statePostal
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="State Postal"
+                                                                    name="./statePostal"/>
+                                                            <statePopulation
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                    fieldLabel="State Population"
+                                                                    name="./statePopulation"/>
+                                                            <stateDensity
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldDescription="Select State Density"
+                                                                    fieldLabel="State Density"
+                                                                    name="./stateDensity">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <high
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="High"
+                                                                            value="high"/>
+                                                                    <medium
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Medium"
+                                                                            value="medium"/>
+                                                                    <low
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Low"
+                                                                            value="low"/>
+                                                                </items>
+                                                            </stateDensity>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </field>
+                                        </states>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </countries>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,26 @@
+<div>
+    <b>Countries Details</b>
+    <br><br>
+    <div data-sly-use.countryModel="com.myproject.aem.core.models.CountriesModel" data-sly-unwrap>
+        <div data-sly-test="${!countryModel || wcmmode.edit}">
+            Add country and state details using component dialog
+        </div>
+
+        <div data-sly-test="${countryModel.countriesList}">
+            <div data-sly-list.country="${countryModel.countriesList}">
+                <div>
+                    <div>Country Name: ${country.countryName}</div>
+                    <br>
+                    <div data-sly-list.state="${country.stateList}" style="margin-left:40px">
+                        <div>State No.: ${stateList.count}</b></div>
+                        <div>Name: ${state.stateName}</b></div>
+                        <div>Postal: ${state.statePostal}</div>
+                        <div>Population: ${state.statePopulation}</div>
+                        <div>Density: ${state.stateDensity}</div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

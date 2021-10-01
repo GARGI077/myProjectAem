@@ -1,0 +1,17 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html">
+    <div data-sly-test.searchButton="${properties.searchLabel}" class="container">
+        <form class="search__form-container" data-nodepath="${currentNode.Path}">
+            <input type="hidden" class="searchPath" value="${properties.searchPath}"/>
+            <input type="text" class="search-form-input" id="searchTerm" name="searchTerm" value="${request.requestParameterMap['searchTerm'][0].toString}" aria-label="search-text"/>
+
+            <div class="search__btn-container">
+                <button class="btn btn-primary search-btn" type="submit">${searchButton}</button>
+            </div>
+        </form>
+        <hr class="horizontal-rule">
+        <div class="search-results">
+            <div class="search-results__items"></div>
+        </div>
+    </div>
+    <sly data-sly-call="${template.placeholder @ isEmpty=!searchButton}"></sly>
+</sly>
